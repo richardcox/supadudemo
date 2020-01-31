@@ -20,7 +20,7 @@
 
             // Render the cuntent modules
             if ( !post_password_required() ) { 
-                theme::renderModules('supadu_custom_content');
+                theme::renderModules('supadu_page_content');
             }
         }
     }
