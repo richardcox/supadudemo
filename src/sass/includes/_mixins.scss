@@ -1,0 +1,45 @@
+@mixin fontFace($family, $src, $style: normal, $weight: normal) {
+    @font-face {
+        font-family: $family;
+        src: url('../../fonts/#{$src}.otf') format('opentype');
+        /** Add these when all font formats are available */
+        /*        src: url('../../fonts/#{$src}.eot'); // IE9 compat
+        src: url('../../fonts/#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+        url('../../fonts/#{$src}.woff') format('woff'), // standards
+        url('../../fonts/#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+        url('../../fonts/#{$src}.otf') format('opentype'), // 
+        url('../../fonts/#{$src}.svg##{$family}') format('svg'); // legacy iOS
+*/
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+@mixin box-shadow(
+$top,
+$left,
+$blur,
+$size,
+$color,
+$inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $size $color;
+        -moz-box-shadow: inset $top $left $blur $size $color;
+        box-shadow: inset $top $left $blur $size $color;
+    }
+    @else {
+        -webkit-box-shadow: $top $left $blur $size $color;
+        -moz-box-shadow: $top $left $blur $size $color;
+        box-shadow: $top $left $blur $size $color;
+    }
+}
+
+
+
+@mixin transition-delay($delay) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+

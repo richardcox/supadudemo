@@ -1,0 +1,1 @@
+<h1>Template for news post type archive page</h1>

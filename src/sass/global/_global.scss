@@ -1,0 +1,130 @@
+@import 'compass/css3';
+@import '../includes/includes';
+@import '../components/components';
+@import 'header';
+@import 'footer';
+@import url('https://fonts.googleapis.com/css?family=Muli');
+html {
+    -webkit-text-size-adjust: none;
+    min-width: 100vw;
+}
+
+body {
+    min-width: 100vw;
+}
+
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.row {
+    opacity: 0;
+
+    @media screen and(max-width: $wpBreakPointSmall) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+footer .row {
+    opacity: 1;
+}
+
+body {
+    background: $themeLtGrey;
+    overflow-x: hidden;
+    opacity: 0;
+    @include transition(all, 1.5s);
+    &.loaded {
+        opacity: 1;
+    }
+
+    #supadu-main {
+        display: block;
+        min-height: calc(100vh - 300px);
+        section {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            &:first-of-type {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    @media screen and(max-width: $breakPointSmall) {
+        padding-top: $headerHeightSmall;
+    }
+    @media screen and(min-width: $breakPointLarge) {
+        padding-top: $headerHeightLarge;
+    }
+}
+
+.reveal-overlay {
+    z-index: 99999999;
+}
+
+$stuckTopLoggedSmall: $headerHeightSmall + 29px;
+$stuckTopLoggedMedium: $headerHeightSmall + 15px;
+$stuckTopLoggedLarge: $headerHeightLarge + 15px;
+.logged-in {
+    .stuck {
+        @media screen and(max-width: $wpBreakPointSmall) {
+            top: $stuckTopLoggedSmall;
+        }
+        @media screen and(min-width: $wpBreakPointLarge) and (max-width: $breakPointSmall) {
+            top: $stuckTopLoggedMedium;
+        }
+        @media screen and(min-width: $breakPointLarge) {
+            top: $stuckTopLoggedLarge;
+        }
+    }
+}
+
+.sticky-wrapper {
+    margin: 0px;
+}
+
+$stuckTopSmall: $headerHeightSmall - 15px;
+$stuckTopLarge: $headerHeightLarge - 15px;
+.stuck {
+    z-index: 50;
+    position: fixed;
+    margin-top: 15px;
+    @include transition(margin,
+    .5s);
+    @media screen and(max-width: $breakPointSmall) {
+        top: $stuckTopSmall;
+    }
+    @media screen and(min-width: $breakPointLarge) {
+        top: $stuckTopLarge;
+    }
+}
+
+
+.table {
+    display: table;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.mobile-padding-none {
+    @media screen and(max-width: $wpBreakPointSmall) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

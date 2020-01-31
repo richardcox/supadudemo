@@ -1,0 +1,23 @@
+{
+    "page-template-default": {
+        "deps": [
+            "js/global.js",
+            "js/libs/foundation/foundation.js",
+            "js/libs/foundation/motion-ui.js",
+            "js/libs/waypoints/jquery.waypoints.js",
+            "js/libs/slick/slick.js",
+            "js/modules/**/*.js"
+        ]
+    },
+    "error404": {
+        "deps": [
+            "js/global.js",
+            "js/libs/foundation/foundation.js",
+            "js/libs/foundation/motion-ui.js",
+            "js/libs/waypoints/jquery.waypoints.js",
+            "js/libs/slick/slick.js",
+            "js/modules/**/*.js"
+        ]
+    }
+
+}

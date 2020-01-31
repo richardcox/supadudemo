@@ -1,0 +1,46 @@
+#supadu-footer {
+    float: left;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: $color-bg-dark;
+    color: $color-text-light;
+
+    ul {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        padding: 0;
+        margin: 5px;
+        border-bottom: solid 1px darken($color-bg-light, 10%);
+        list-style-type: none;
+
+        a {
+            display: inline-block;
+            padding: 5px 0px;
+
+            color: $color-text-light;
+            @include transition(all, .4s);
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+    .columns {
+        @media screen and(max-width: $smallDesktop) {
+            margin-bottom: 50px;
+        }
+    }
+    .copyright {
+        p {
+            color: $color-text-light;
+            margin-top: 100px;
+            font-size: .87rem;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.supadu-html-block {
+	position: relative;
+
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	.divider {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		max-width: 100%;
+
+		hr {
+			border-color: lighten($color-bg-dark, 50%);
+		}
+	}
+}

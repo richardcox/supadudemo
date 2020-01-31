@@ -1,0 +1,135 @@
+@media screen and(min-width: 1100px) {
+    nav.mobile,
+    .mobile-nav-buttons {
+        display: none !important;
+    }
+}
+
+@media screen and(max-width: 1101px) {
+    #supadu-header {
+        .header-column {
+            padding-right: 0px;
+            .open-mobile-nav {
+                width: 50px;
+                font-size: 22px;
+                padding: 0px 0px;
+                text-align: center;
+                justify-content: center;
+                span {
+                    line-height: 1.75;
+                }
+            }
+        }
+    }
+    .mobile-nav-buttons {
+        float: right;
+        display: inline-block;
+        height: $headerHeightSmall;
+        margin: 0;
+        padding: 0;
+        .top-level-link {
+            float: right;
+        }
+        &.table {
+            @media screen and(min-width: 915px) {
+                height: 100px;
+            }
+        }
+        &.login {
+            margin: 0;
+            padding: 0px 15px;
+        }
+        .button.top-level-link {
+            width: auto;
+            margin: 0;
+            margin-left: 0px;
+        }
+        @media screen and(max-width: 550px) {
+            .tablet-text {
+                display: none;
+            }
+        }
+    }
+    nav.mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0%;
+        width: 100%;
+        background: $color-bg-dark-opac-80;
+        overflow-x: scroll;
+        z-index: 9999999;
+        @include transition(height, .4s);
+        &.show {
+            height: 100%;
+        }
+        li {
+            width: 50%;
+            @media screen and(max-width: 550px) {
+                width: 100%;
+                a {
+                    height: 50px;
+                }
+            }
+            @media screen and(min-width: 551px) {
+                a {
+                    height: 100px;
+                }
+            }
+        }
+        .is-drilldown {
+            padding-top: 67px;
+            max-width: 2000px;
+        }
+        .is-drilldown-submenu {
+            background-color: $color-bg-dark-opac-80;
+            .js-drilldown-back {
+                height: auto;
+                width: 100%;
+                padding: 15px;
+                a {
+                    height: auto;
+                    padding: 10px 0px;
+                    &:before {
+                        font-family: icomoon;
+                        content: "\f053";
+                        border: none;
+                        margin-right: 25px;
+                        width: auto;
+                        height: auto;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        li {
+            display: inline-block;
+            float: left;
+            a.table {
+                display: table;
+                width: 100%;
+                .icon-chevron-right {
+                    font-size: 12px;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .menu {
+            a {
+                text-transform: uppercase;
+                color: $color-text-light;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .mobile-nav-topbar {
+            text-align: center;
+            .button {
+                background-color: $color-bg-dark-opac-80;
+                width: 100%;
+                border-bottom: dotted 1px darken($color-bg-dark-opac-80, 10%);
+            }
+        }
+    }
+}
