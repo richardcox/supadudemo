@@ -40,7 +40,6 @@ class theme {
      */
     private function addActions() {
         add_action( 'init', [$this, 'loadResources'] );
-        add_action( 'admin_head', [$this, 'removePageAtts'] );
         add_action( 'login_enqueue_scripts', [$this, 'my_login_logo'] );
     }
 

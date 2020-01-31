@@ -30,7 +30,7 @@ class resources {
      * Enqueue styles sheets if a file name matching one the body classes exists
      */
     public static function conditionalStyles( $classes ) {
-        $absPath = ABSPATH . 'wp-content/themes/iscls_theme/assets/css/templates/';
+        $absPath = ABSPATH . 'wp-content/themes/supadu-demo/assets/css/templates/';
         $url = get_template_directory_uri() . '/assets/css/templates/';
         $page_template_names = $classes;
 
@@ -54,7 +54,7 @@ class resources {
      */
     public static function conditionalScripts( $classes ) {
         
-        $absPath = ABSPATH . 'wp-content/themes/iscls_theme/assets/js/templates/';
+        $absPath = ABSPATH . 'wp-content/themes/supadu-demo/assets/js/templates/';
         $url = get_template_directory_uri() . '/assets/js/templates/';
         $page_template_names = $classes;
 
