@@ -18,7 +18,7 @@
             the_post();
             the_content();
 
-            // Render the cuntent modules
+            // Render the content modules
             if ( !post_password_required() ) { 
                 theme::renderModules('supadu_page_content');
             }
